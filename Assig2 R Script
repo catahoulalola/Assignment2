@@ -1,0 +1,43 @@
+#question 1. I used "get info" on each file to determine the csv file
+
+#question 2 open csv file
+read.csv ("/Users/lauraseidel/Desktop/weather3.c")
+
+#question 3 change R working directory and read csv file
+setwd ("/Users/lauraseidel/Desktop")
+read.csv("weather3.c")
+
+#question 4 open first data file and specify value of 1 for row names
+read.csv ("/Users/lauraseidel/Desktop/data20130101.csv")
+jan1<-read.csv("data20130101.csv", row.names=1)
+
+# question 5 calculate max and min values
+maxValue <- max(jan1)
+minValue <- min(jan1)
+
+# question 6 convert hectopascals to PSI
+maxValue * 0.0145037738
+
+#question 7 open all 9 files and calculate maxValue across 9 files
+read.csv ("/Users/lauraseidel/Desktop/data20130101.csv")
+read.csv ("/Users/lauraseidel/Desktop/data20130102.csv")
+read.csv ("/Users/lauraseidel/Desktop/data20130103.csv")
+read.csv ("/Users/lauraseidel/Desktop/data20130104.csv")
+read.csv ("/Users/lauraseidel/Desktop/data20130105.csv")
+read.csv ("/Users/lauraseidel/Desktop/data20130106.csv")
+read.csv ("/Users/lauraseidel/Desktop/data20130107.csv")
+read.csv ("/Users/lauraseidel/Desktop/data20130108.csv")
+read.csv ("/Users/lauraseidel/Desktop/data20130109.csv")
+
+#calculate maxValue across 9 files
+jan1<-read.csv("data20130101.csv", row.names=1)
+jan2<-read.csv("data20130102.csv", row.names=1)
+jan3<-read.csv("data20130103.csv", row.names=1)
+jan4<-read.csv("data20130104.csv", row.names=1)
+jan5<-read.csv("data20130105.csv", row.names=1)
+jan6<-read.csv("data20130106.csv", row.names=1)
+jan7<-read.csv("data20130107.csv", row.names=1)
+jan8<-read.csv("data20130108.csv", row.names=1)
+jan9<-read.csv("data20130109.csv", row.names=1)
+
+maxValue <-max(jan1, jan2, jan3, jan4, jan5, jan6, jan7, jan8, jan9)
